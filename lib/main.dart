@@ -122,8 +122,48 @@ class _HomePageState extends State<HomePage> {
                     height: 15,
                   ),
                   Container(
-                    child: Text("data"),
-                  )
+                    padding: const EdgeInsets.only(left: 15),
+                    height: 350,
+                    width: 800,
+                    //color: Colors.amber,
+                    child: Container(
+                      height: 400,
+                      width: double.infinity,
+                      child: ListView.builder(
+                        itemCount: 4,
+                        scrollDirection: Axis.horizontal,
+                        itemBuilder: (BuildContext context, int index) {
+                          return Stack(
+                              alignment: Alignment.bottomCenter,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 8.0),
+                                  child: Column(
+                                    children: [
+                                      GestureDetector(
+                                        onTap: (() {}),
+                                        child: Container(
+                                          margin: const EdgeInsets.only(
+                                              right: 19, top: 10),
+                                          width: 350,
+                                          height: 270,
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.only(
+                                                topLeft: Radius.circular(8),
+                                                topRight: Radius.circular(8)),
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ]);
+                        },
+                      ),
+                    ),
+                  ),
                 ],
               );
             } else if (snapshot.connectionState == ConnectionState.waiting) {
