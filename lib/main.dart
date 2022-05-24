@@ -147,15 +147,78 @@ class _HomePageState extends State<HomePage> {
                                           margin: const EdgeInsets.only(
                                               right: 19, top: 10),
                                           width: 350,
-                                          height: 270,
+                                          height: 200,
                                           decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                                fit: BoxFit.fill,
+                                                image: AssetImage(
+                                                    "assets/images/bluecloud.png")),
                                             borderRadius: BorderRadius.only(
                                                 topLeft: Radius.circular(8),
                                                 topRight: Radius.circular(8)),
-                                            color: Colors.white,
                                           ),
                                         ),
                                       ),
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(right: 18),
+                                        child: Container(
+                                          height: 100,
+                                          width: 350,
+                                          decoration: BoxDecoration(
+                                              color: Color.fromARGB(
+                                                  255, 56, 59, 71),
+                                              borderRadius: BorderRadius.only(
+                                                bottomLeft: Radius.circular(8),
+                                                bottomRight: Radius.circular(8),
+                                              )),
+                                          //color: Color.fromARGB(255, 206, 206, 206),
+                                          child: Padding(
+                                            padding: const EdgeInsets.only(
+                                                top: 0,
+                                                left: 0,
+                                                right: 0,
+                                                bottom: 0),
+                                            child: Column(
+                                              children: [
+                                                Text(
+                                                  "",
+                                                  style: const TextStyle(
+                                                      color: Color.fromARGB(
+                                                          255, 64, 64, 64),
+                                                      fontSize: 20,
+                                                      fontWeight:
+                                                          FontWeight.bold),
+                                                ),
+                                                const SizedBox(
+                                                  height: 5,
+                                                ),
+                                                Row(
+                                                  // mainAxisAlignment:
+                                                  //     MainAxisAlignment.spaceBetween,
+                                                  children: [
+                                                    const Icon(
+                                                      Icons.pin_drop,
+                                                      size: 20,
+                                                    ),
+                                                    SizedBox(
+                                                      width: 20,
+                                                    ),
+                                                    Text(
+                                                      "",
+                                                      style: const TextStyle(
+                                                        color: Color.fromARGB(
+                                                            255, 65, 65, 65),
+                                                        fontSize: 16,
+                                                      ),
+                                                    ),
+                                                  ],
+                                                )
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      )
                                     ],
                                   ),
                                 ),
