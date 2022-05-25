@@ -95,7 +95,8 @@ class _HomePageState extends State<HomePage> {
                                   border: OutlineInputBorder(),
                                   labelText: 'Enter a city',
                                   labelStyle: TextStyle(
-                                      color: Colors.white, fontSize: 14))),
+                                      color: Color.fromARGB(255, 84, 84, 84),
+                                      fontSize: 13))),
                         ),
                       ),
                       Positioned(
@@ -112,7 +113,7 @@ class _HomePageState extends State<HomePage> {
                           child: Center(
                               child: Text(
                             "Add City",
-                            style: TextStyle(color: Colors.white, fontSize: 14),
+                            style: TextStyle(color: Colors.white, fontSize: 13),
                           )),
                         ),
                       ),
@@ -143,27 +144,68 @@ class _HomePageState extends State<HomePage> {
                                     children: [
                                       GestureDetector(
                                         onTap: (() {}),
-                                        child: Container(
-                                          margin: const EdgeInsets.only(
-                                              right: 19, top: 10),
-                                          width: 350,
-                                          height: 200,
-                                          decoration: BoxDecoration(
-                                            image: DecorationImage(
-                                                fit: BoxFit.fill,
-                                                image: AssetImage(
-                                                    "assets/images/bluecloud.png")),
-                                            borderRadius: BorderRadius.only(
-                                                topLeft: Radius.circular(8),
-                                                topRight: Radius.circular(8)),
+                                        child: Stack(children: [
+                                          Container(
+                                            margin: const EdgeInsets.only(
+                                                right: 19, top: 10),
+                                            width: 350,
+                                            height: 200,
+                                            decoration: BoxDecoration(
+                                              image: DecorationImage(
+                                                  fit: BoxFit.fill,
+                                                  image: AssetImage(
+                                                      "assets/images/bluecloud.png")),
+                                              borderRadius: BorderRadius.only(
+                                                  topLeft: Radius.circular(8),
+                                                  topRight: Radius.circular(8)),
+                                            ),
                                           ),
-                                        ),
+                                          Positioned(
+                                            top: 40,
+                                            left: 50,
+                                            child: Column(
+                                              children: [
+                                                Text(
+                                                  "Colombo, LK",
+                                                  style: TextStyle(
+                                                    color: Color.fromARGB(
+                                                        255, 228, 228, 228),
+                                                    fontSize: 20,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                ),
+                                                SizedBox(
+                                                  height: 8,
+                                                ),
+                                                Text(
+                                                  "9.19am, feb 8",
+                                                  style: TextStyle(
+                                                    color: Color.fromARGB(
+                                                        255, 228, 228, 228),
+                                                  ),
+                                                ),
+                                                SizedBox(
+                                                  height: 40,
+                                                ),
+                                                Text(
+                                                  "Few Clouds",
+                                                  style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 15,
+                                                    color: Color.fromARGB(
+                                                        255, 228, 228, 228),
+                                                  ),
+                                                )
+                                              ],
+                                            ),
+                                          ),
+                                        ]),
                                       ),
                                       Padding(
                                         padding:
                                             const EdgeInsets.only(right: 18),
                                         child: Container(
-                                          height: 100,
+                                          height: 120,
                                           width: 350,
                                           decoration: BoxDecoration(
                                               color: Color.fromARGB(
@@ -181,39 +223,224 @@ class _HomePageState extends State<HomePage> {
                                                 bottom: 0),
                                             child: Column(
                                               children: [
-                                                Text(
-                                                  "",
-                                                  style: const TextStyle(
-                                                      color: Color.fromARGB(
-                                                          255, 64, 64, 64),
-                                                      fontSize: 20,
-                                                      fontWeight:
-                                                          FontWeight.bold),
-                                                ),
-                                                const SizedBox(
-                                                  height: 5,
+                                                SizedBox(
+                                                  height: 20,
                                                 ),
                                                 Row(
-                                                  // mainAxisAlignment:
-                                                  //     MainAxisAlignment.spaceBetween,
-                                                  children: [
-                                                    const Icon(
-                                                      Icons.pin_drop,
-                                                      size: 20,
-                                                    ),
-                                                    SizedBox(
-                                                      width: 20,
-                                                    ),
-                                                    Text(
-                                                      "",
-                                                      style: const TextStyle(
-                                                        color: Color.fromARGB(
-                                                            255, 65, 65, 65),
-                                                        fontSize: 16,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceAround,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      Column(
+                                                        children: [
+                                                          Row(children: [
+                                                            Text(
+                                                              "Pressure: ",
+                                                              style: TextStyle(
+                                                                  fontSize: 13,
+                                                                  color: Color
+                                                                      .fromARGB(
+                                                                          255,
+                                                                          224,
+                                                                          224,
+                                                                          224),
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold),
+                                                            ),
+                                                            Text(
+                                                              "1018hPa",
+                                                              style: TextStyle(
+                                                                fontSize: 13,
+                                                                color: Color
+                                                                    .fromARGB(
+                                                                        255,
+                                                                        224,
+                                                                        224,
+                                                                        224),
+                                                              ),
+                                                            ),
+                                                          ]),
+                                                          SizedBox(
+                                                            height: 10,
+                                                          ),
+                                                          Row(children: [
+                                                            Text(
+                                                              "Humidity: ",
+                                                              style: TextStyle(
+                                                                  fontSize: 13,
+                                                                  color: Color
+                                                                      .fromARGB(
+                                                                          255,
+                                                                          224,
+                                                                          224,
+                                                                          224),
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold),
+                                                            ),
+                                                            Text(
+                                                              "78%        ",
+                                                              style: TextStyle(
+                                                                fontSize: 13,
+                                                                color: Color
+                                                                    .fromARGB(
+                                                                        255,
+                                                                        224,
+                                                                        224,
+                                                                        224),
+                                                              ),
+                                                            ),
+                                                          ]),
+                                                          SizedBox(
+                                                            height: 10,
+                                                          ),
+                                                          Row(children: [
+                                                            Text(
+                                                              "Visibility: ",
+                                                              style: TextStyle(
+                                                                  fontSize: 13,
+                                                                  color: Color
+                                                                      .fromARGB(
+                                                                          255,
+                                                                          224,
+                                                                          224,
+                                                                          224),
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold),
+                                                            ),
+                                                            Text(
+                                                              "8.0Km     ",
+                                                              style: TextStyle(
+                                                                fontSize: 13,
+                                                                color: Color
+                                                                    .fromARGB(
+                                                                        255,
+                                                                        224,
+                                                                        224,
+                                                                        224),
+                                                              ),
+                                                            ),
+                                                          ])
+                                                        ],
                                                       ),
-                                                    ),
-                                                  ],
-                                                )
+                                                      SizedBox(
+                                                        height: 80,
+                                                        child: VerticalDivider(
+                                                          color: Color.fromARGB(
+                                                              255, 85, 85, 85),
+                                                          thickness: 1.5,
+                                                          indent: 0,
+                                                          endIndent: 10,
+                                                          width: 0,
+                                                        ),
+                                                      ),
+                                                      Column(
+                                                        children: [
+                                                          Container(
+                                                            height: 50,
+                                                            width: 40,
+                                                            decoration: BoxDecoration(
+                                                                image: DecorationImage(
+                                                                    image: AssetImage(
+                                                                        "assets/images/airicon.png"))),
+                                                          ),
+                                                          Text(
+                                                            "4.0m/s 120 °",
+                                                            style: TextStyle(
+                                                              fontSize: 13,
+                                                              color: Color
+                                                                  .fromARGB(
+                                                                      255,
+                                                                      224,
+                                                                      224,
+                                                                      224),
+                                                            ),
+                                                          )
+                                                        ],
+                                                      ),
+                                                      SizedBox(
+                                                        height: 80,
+                                                        child: VerticalDivider(
+                                                          color: Color.fromARGB(
+                                                              255, 85, 85, 85),
+                                                          thickness: 1.5,
+                                                          indent: 0,
+                                                          endIndent: 10,
+                                                          width: 0,
+                                                        ),
+                                                      ),
+                                                      Column(
+                                                        children: [
+                                                          SizedBox(
+                                                            height: 15,
+                                                          ),
+                                                          Row(children: [
+                                                            Text(
+                                                              "Sunrise: ",
+                                                              style: TextStyle(
+                                                                  fontSize: 13,
+                                                                  color: Color
+                                                                      .fromARGB(
+                                                                          255,
+                                                                          224,
+                                                                          224,
+                                                                          224),
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold),
+                                                            ),
+                                                            Text(
+                                                              "6:05am",
+                                                              style: TextStyle(
+                                                                fontSize: 13,
+                                                                color: Color
+                                                                    .fromARGB(
+                                                                        255,
+                                                                        224,
+                                                                        224,
+                                                                        224),
+                                                              ),
+                                                            ),
+                                                          ]),
+                                                          SizedBox(
+                                                            height: 10,
+                                                          ),
+                                                          Row(children: [
+                                                            Text(
+                                                              "Sunset: ",
+                                                              style: TextStyle(
+                                                                  fontSize: 13,
+                                                                  color: Color
+                                                                      .fromARGB(
+                                                                          255,
+                                                                          224,
+                                                                          224,
+                                                                          224),
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold),
+                                                            ),
+                                                            Text(
+                                                              "6:05am ",
+                                                              style: TextStyle(
+                                                                fontSize: 13,
+                                                                color: Color
+                                                                    .fromARGB(
+                                                                        255,
+                                                                        224,
+                                                                        224,
+                                                                        224),
+                                                              ),
+                                                            ),
+                                                          ]),
+                                                        ],
+                                                      )
+                                                    ])
                                               ],
                                             ),
                                           ),
